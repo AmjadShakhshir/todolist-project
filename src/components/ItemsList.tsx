@@ -9,8 +9,7 @@ const ItemsList = ({ items, handleChecked, deleteItem }: {
     return (
         <ul>
             { items.map((item) =>  
-                <ItemList 
-                    key={item.id}
+                <ItemList
                     item={item}
                     handleChecked={handleChecked}
                     deleteItem={deleteItem}

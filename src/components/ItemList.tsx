@@ -1,14 +1,13 @@
 import { FaTrashAlt } from 'react-icons/fa'
 import { Item } from '../types/Item';
 
-const ItemList = ({ key, item, handleChecked, deleteItem }: {
-    key: number;
+const ItemList = ({ item, handleChecked, deleteItem }: {
     item: Item;
     handleChecked: (id: number) => void;
     deleteItem: (id: number) => void;
 }) => {
     return (
-        <li className='item' key={key}>
+        <li className='item' key={item.id}>
             <input
             onChange={() => handleChecked(item.id)}
             type="checkbox"
