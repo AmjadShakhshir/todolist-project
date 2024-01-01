@@ -117,7 +117,8 @@ ul li::before {
   outline: none;
 }
 
-.addForm {
+.addForm,
+.changeColorForm {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -126,12 +127,14 @@ ul li::before {
   border-bottom: 1px solid #eee;
 }
 
-.addForm label {
+.addForm label,
+.changeColorForm label {
   position: absolute;
   left: -99999px;
 }
 
-.addForm input[type="text"] {
+.addForm input[type="text"],
+.changeColorForm input[type="text"] {
   flex-grow: 1;
   font-size: 1rem;
   padding: 0.25rem;

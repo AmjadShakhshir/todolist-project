@@ -1,0 +1,62 @@
+{"items": [
+    {
+        "id": 1,
+        "checked": false,
+        "item": "Milk"
+    },
+    {
+        "id": 2,
+        "checked": true,
+        "item": "Eggs, Scrambled, in a pan"
+    },
+    {
+        "id": 3,
+        "checked": false,
+        "item": "Bacon"
+    },
+    {
+        "id": 4,
+        "checked": false,
+        "item": "Bread"
+    },
+    {
+        "id": 5,
+        "checked": false,
+        "item": "Butter"
+    },
+    {
+        "id": 6,
+        "checked": false,
+        "item": "Cheese"
+    },
+    {
+        "id": 7,
+        "checked": false,
+        "item": "Coffee"
+    },
+    {
+        "id": 8,
+        "checked": false,
+        "item": "Tea"
+    },
+    {
+        "id": 9,
+        "checked": false,
+        "item": "Sugar"
+    },
+    {
+        "id": 10,
+        "checked": false,
+        "item": "Salt"
+    },
+    {
+        "id": 11,
+        "checked": false,
+        "item": "Pepper"
+    },
+    {
+        "id": 12,
+        "checked": false,
+        "item": "Peanut Butter"
+    }
+]}

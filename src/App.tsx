@@ -36,11 +36,12 @@ function App() {
         setAndSaveItems(listItems);
         setNewItem('');
     }
-
     
   return (
     <div className="App">
-      <Header title="Grocery List" />
+      <Header
+        title="Grocery List"
+        />
       <AddItem 
         newItem={newItem}
         setNewItem={setNewItem}
@@ -55,7 +56,9 @@ function App() {
         handleChecked={handleChecked}
         deleteItem={deleteItem}
       />
-      <Footer length={items.length} />
+      <Footer
+        length={items.length}
+      />
     </div>
   );
 }
