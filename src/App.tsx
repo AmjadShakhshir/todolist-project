@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
 import Content from './components/Content';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/common/Footer';
+import Header from './components/common/Header';
+import AddItem from './components/AddItem';
 
 function App() {
   const [ items, setItems ] = useState([
@@ -22,7 +23,7 @@ function App() {
             item: 'Travel to Hämeenlinna'
         }
     ]);
-
+    const [ newItem, setNewItem ] = useState('');
 
     const handleChecked = (id:number) => {
         const listItems = items.map((item) => item.id === id ? {...item, 
@@ -36,10 +37,24 @@ function App() {
         setItems(listItems)
         localStorage.setItem('shoppingList', JSON.stringify(listItems))
     }
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (newItem === '') return;
+        const listItems = [...items, {id: items.length + 1, checked: false, item: newItem}];
+        setItems(listItems)
+        localStorage.setItem('shoppingList', JSON.stringify(listItems))
+        setNewItem('')
+    }
     
   return (
     <div className="App">
       <Header title="Grocery List" />
+      <AddItem 
+        newItem={newItem}
+        setNewItem={setNewItem}
+        handleSubmit={handleSubmit}
+      />
       <Content
         items={items}
         handleChecked={handleChecked}

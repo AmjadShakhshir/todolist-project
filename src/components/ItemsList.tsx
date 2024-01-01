@@ -1,4 +1,4 @@
-import ItemList from './ItemList';
+import LineItem from './LineItem';
 import { Item } from '../types/Item';
 
 const ItemsList = ({ items, handleChecked, deleteItem }: { 
@@ -9,7 +9,8 @@ const ItemsList = ({ items, handleChecked, deleteItem }: {
     return (
         <ul>
             { items.map((item) =>  
-                <ItemList
+                <LineItem
+                    key={item.id}
                     item={item}
                     handleChecked={handleChecked}
                     deleteItem={deleteItem}
