@@ -22,15 +22,30 @@ function App() {
             item: 'Travel to Hämeenlinna'
         }
     ]);
+
+
+    const handleChecked = (id:number) => {
+        const listItems = items.map((item) => item.id === id ? {...item, 
+        checked: !item.checked} : item);
+        setItems(listItems)
+        localStorage.setItem('shoppingList', JSON.stringify(listItems))
+    };
+
+    const deleteItem = (id: number) => {
+        const listItems = items.filter((item) => item.id !== id);
+        setItems(listItems)
+        localStorage.setItem('shoppingList', JSON.stringify(listItems))
+    }
     
   return (
     <div className="App">
       <Header title="Grocery List" />
       <Content
         items={items}
-        setItems={setItems}
+        handleChecked={handleChecked}
+        deleteItem={deleteItem}
       />
-      <Footer />
+      <Footer length={items.length} />
     </div>
   );
 }

@@ -6,23 +6,12 @@ type Item = {
     item: string;
 };
 
-const Content = ({ items, setItems}: 
+const Content = ({ items, handleChecked, deleteItem}: 
     { 
-        items: Item[],
-        setItems: React.Dispatch<React.SetStateAction<Item[]>>
+        items: Item[];
+        handleChecked: (id: number) => void;
+        deleteItem: (id: number) => void;
     }) => {
-    const handleChecked = (id:number) => {
-        const listItems = items.map((item) => item.id === id ? {...item, 
-        checked: !item.checked} : item);
-        setItems(listItems)
-        localStorage.setItem('shoppingList', JSON.stringify(listItems))
-    };
-
-    const deleteItem = (id: number) => {
-        const listItems = items.filter((item) => item.id !== id);
-        setItems(listItems)
-        localStorage.setItem('shoppingList', JSON.stringify(listItems))
-    }
 
     return (
         <main>
