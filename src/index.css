@@ -61,7 +61,7 @@ footer {
 ul {
   width: 100%;
   list-style: none;
-  padding: 10rem 0.25rem 0.25rem;
+  padding: 0 0.25rem 0.25rem;
 }
 
 ul li::before {

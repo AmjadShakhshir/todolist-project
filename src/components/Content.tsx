@@ -14,7 +14,7 @@ const Content = ({ items, handleChecked, deleteItem}:
     }) => {
 
     return (
-        <main>
+        <>
             { items.length ? (
                 <ItemsList 
                     items={items}
@@ -24,7 +24,7 @@ const Content = ({ items, handleChecked, deleteItem}:
             ) : (
                 <p>Your list is empty.</p>
             )}
-        </main>
+        </>
     )
 }
 
